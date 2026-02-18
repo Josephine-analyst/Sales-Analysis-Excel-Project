@@ -1,27 +1,38 @@
 # SALES ANALYSIS PROJECT
 
-## PROJECT DESCRIPTION
-   This project aims at enabling stakeholders to monitor key sales metrics, identify trends and make data-driven to optimize revenue and 
-   operational efficiency.
+Interactive Excel dashboard analyzing sales performance across regions, products, managers, time periods, and customer locations. Built entirely in Microsoft Excel using pivot tables, calculated columns, slicers, charts, and a consolidated dashboard to uncover trends and support data-driven business decisions.
+
+## PROJECT OBJECTIVES
+   - Monitor key sales metrics (average sales, total revenue, transaction volume)
+   - Identify top-performing regions, suburbs, product categories, and sales managers
+   - Reveal seasonal patterns (monthly & day-of-week trends)
+   - Create an intuitive dashboard for quick insights and filtering
+   - Provide actionable recommendations for marketing, inventory, and performance optimization
 
 <img width="1366" height="768" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/80a5d905-478d-4cdc-8392-31c395c1911a" />
 
 
-### SOFTWARE USED
-    * MICROSOFT EXCEL
+### TOOLS & TECHNOLOGIES
+    - Microsoft Excel (100% of the project – no Power BI, SQL, or external tools)
+    - Features used: Tables, Calculated Columns, PivotTables, PivotCharts, Slicers (connected), Dashboard layout
+    
+### STEP-BY-STEP PROCESS
+1. **Data Loading & Preparation**
+     - Import raw data into Excel
+     - Convert range to Excel Table (Ctrl + T) → name it `SalesTable`
 
-### STEPS FOLLOWED
-    * Step 1: Load the data using Microsoft Excel, dataset is an xlsx file.
-    * Step 2: Convert the dataset to a table format
-               Select the data range, go to insert>Table and give the new table a name "Sales Table".
-    * Step 3: Add Calculated Columns
-               - Average Sales=AVERAGE(K:K)
-               Extracting the year, month and day from the month column
-               - Year=YEAR([@Month])
-               - Month=TEXT([@Month],"mmmm")
-               - Day=TEXT([@Month],"dddd")
-    * Step 4: Key Performance Indicator
-               - Total Average Sales=SUM(DATASET!L:L)
+2. **Calculated Columns**
+     - Added in table columns (using formulas):
+     - `Year` = YEAR([Order Date])
+     - `Month` = TEXT([Order Date], "mmmm")
+     - `Day` = TEXT([Order Date], "dddd")
+     - `Average Sales` = AVERAGE([Sales Amount])
+
+3. **Key KPIs & Summary**
+     - Created a summary area with formulas (COUNT, SUM, AVERAGE) for:
+     - Total Transactions
+     - Total Revenue
+     - Average Sales per Transaction
 
 ### CREATE PIVOT TABLES FOR ANALYSIS
     1. INSERT PIVOT TABLES
@@ -98,38 +109,47 @@
  <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/40233bd1-7b47-4192-80e4-201d1625040c" />
 
 
-### ADD INTERACTIVITY WITH SLICER
-    1. Insert Slicer
-       - select any pivot table, go to insert>slicer and choose 'Financial Year'.
-       
-    2. Connect slicer to all pivot tables:
-       - Pivot table Analyze>Report connections, select all relevant pivot tables.
-       - Adjust layout for a clean look.
+### **Slicers & Interactivity**
+     - Financial Year slicer connected to **all** pivot tables and charts
+     - Allows dynamic filtering across the entire dashboard
 
-### DESIGN THE DASHBOARD
-    1. Create a Dashboard sheet:
-       - Insert a new sheet named "Dashboard".
-       - Move Charts and KPIs to this sheet by copying and pasting.
-       - Arrange charts for clarity; KPIs at the top , charts below.
 
-    2. Enhance Visuals
-       - Add a title "Sales Analysis Dashboard"
-       - Hide gridelines (view>gridelines) for a cleaner look.
+## 🔍 Key Insights & Recommendations
+    - **Regional Performance**  
+        NSW leads average sales ($867 in 2015 → $971 in 2016); VIC and NT follow closely. ACT lags significantly.
 
-### KEY INSIGHTS
-    1. NSW consistently has the highest average sales ($867 in 2015 and $971 in 2016) compared to VIC ($737 in 2015 and $824 in 2016) 
-       and NT ($665 in 2015 and $791 in 2016).
-    2. ACT has the lowest average sales in 2016/17.
-    3. Campbelltown cosistently has the highest sales ($1,716,158) compared to other suburbs.
-    4. Shoes has the highest sales in 2016/17, topping the list of top ten average sales by category.
-    5. The months of March and August accounts for the highest percentage of annual sales(11%), while October and November
-       recorded the lowest percentage of annual sales(5%).
+    - **Top Locations**  
+        Campbelltown is the highest-performing suburb (over $1.7M in sales) — strong market presence here.
 
-### CONCLUSION
-    This project effectively highlighted key trends, patterns and outliers in the sales data. By leveraging Excel's robust tools, I
-    identified  top performing products, regional sales variations and seasonal trends, enabling data-driven decision-making. These findings
-    underscore opportunities for optimizing inventory,refining marketing strategies and targeting underperforming segments.
-    
+    - **Product Categories**  
+        Shoes dominate average sales — prioritize inventory and promotions for this category.
+
+    - **Seasonality**  
+        March and August are peak months (~11% each of annual sales); October and November are lowest (~5%) — plan inventory/marketing accordingly.
+
+    - **Day-of-Week Trends**  
+        Best-selling days identified — optimize staffing/promotions on high-volume days.
+
+ **Business Recommendations**  
+   - Focus marketing budget and inventory on NSW, VIC, and Campbelltown  
+   - Investigate and support underperforming regions (e.g., ACT)  
+   - Stock more Shoes and plan seasonal promotions for March/August  
+   - Align sales team training and incentives with top performers
+
+## How to Use / Explore This Project
+1. Download or clone the repository
+2. Open `SALES ANALYSIS EXCEL PROJECT.xlsx` in Microsoft Excel
+3. Enable content/macros if prompted (for slicers)
+4. Use the **Financial Year** slicer on the Dashboard sheet to filter all visuals
+5. Explore pivot tables and charts on individual sheets for deeper analysis
+
+### Conclusion
+   This Excel-based sales analysis project reveals clear patterns in performance across regions, products, sales managers, and time periods. Key findings include:
+   - **NSW** consistently leads in average sales (rising from $867 in 2015 to $971 in 2016), followed by VIC and NT, while ACT significantly underperforms.
+   - **Campbelltown** stands out as the top-performing suburb (over $1.7M in total sales).
+   - **Shoes** dominate average sales among product categories — a clear priority for inventory and promotion.
+   - **March** and **August** are peak months (~11% of annual sales each), while October and November are the weakest (~5%).
+   - Certain days of the week show stronger sales — ideal for targeted staffing and promotions.
 
 
 
