@@ -4,6 +4,9 @@
    This project aims at enabling stakeholders to monitor key sales metrics, identify trends and make data-driven to optimize revenue and 
    operational efficiency.
 
+<img width="1366" height="768" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/80a5d905-478d-4cdc-8392-31c395c1911a" />
+
+
 ### SOFTWARE USED
     * MICROSOFT EXCEL
 
